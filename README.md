@@ -38,6 +38,9 @@ are the `register` and `auth` endpoints.
 __Environment Variables__
 
 `MONGO_USERNAME` - The username that will be used to initialize and access the MongoDB container.
+
 `MONGO_PASSWORD` - The password that will be used to initialize and access the MongoDB container.
+
 `MONGO_DATABASE` - The database that will be used to initialize and access the MongoDB container.
+
 `JWT_SECRET` - The secret string that will be used to encrypt / decrypt the json web tokens.
