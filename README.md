@@ -33,3 +33,11 @@ the caller must include `Bearer [Token]` or `Jwt [Token]` (no square brackets) a
 for a header keyed with `Authorization`.  If the token is not valid or not provided,
 then the request will be rejected.  The only endpoints that are excluded from JWT authorization
 are the `register` and `auth` endpoints.
+
+
+__Environment Variables__
+
+`MONGO_USERNAME` - The username that will be used to initialize and access the MongoDB container.
+`MONGO_PASSWORD` - The password that will be used to initialize and access the MongoDB container.
+`MONGO_DATABASE` - The database that will be used to initialize and access the MongoDB container.
+`JWT_SECRET` - The secret string that will be used to encrypt / decrypt the json web tokens.
