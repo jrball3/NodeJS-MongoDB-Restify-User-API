@@ -1,0 +1,28 @@
+version: '3'
+services:
+  user_api:
+    build: .
+    command: sh -c "/wait && npm start"
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    environment:
+      MONGO_HOST: db
+      MONGO_USERNAME: ${MONGO_USERNAME}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_DATABASE: ${MONGO_DATABASE}
+      MONGO_PORT: 27017
+      JWT_SECRET: ${JWT_SECRET}
+      WAIT_HOSTS: db:27017
+  db:
+    image: vepo/mongo
+    ports:
+      - "27017:27017"
+    environment:
+      AUTH: "yes"
+      ADMIN_USER: ${MONGO_USERNAME}
+      ADMIN_PASS: ${MONGO_PASSWORD}
+      APPLICATION_DATABASE: ${MONGO_DATABASE}
+      APPLICATION_USER: ${MONGO_USERNAME}
+      APPLICATION_PASS: ${MONGO_PASSWORD}
