@@ -8,7 +8,7 @@ registration, model validation, and request parameter validation.
 
 __Database__
 
-The chosen database is MongoDB, a NoSQL database. Using a NoSQL database will
+The chosen database is MongoDB, a NoSQL database. Using MongoDB as a database will
 not always achieve optimal performance, but it facilitates prototyping in a
 beginning stage project, making it a natural choice for this boilerplate.
 
