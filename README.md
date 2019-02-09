@@ -35,7 +35,7 @@ then the request will be rejected.  The only endpoints that are excluded from JW
 are the `register` and `auth` endpoints.
 
 
-__Environment Variables__
+__Environment Variables (Required)__
 
 `MONGO_USERNAME` - The username that will be used to initialize and access the MongoDB container.
 
